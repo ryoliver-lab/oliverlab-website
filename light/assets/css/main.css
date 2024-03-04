@@ -2562,10 +2562,16 @@ input, select, textarea {
 
 /* List */
 
+	/* Edit the text location of lists */
+	li p { 
+		padding-left: 5rem; /* Make distance between text and image */
+		padding-top: 5rem;
+	}
+
 	ol {
 		list-style: decimal;
 		margin: 0 0 2rem 0;
-		padding-left: 1.25rem;
+		padding-left: 0rem;
 	}
 
 		ol li {
@@ -2576,10 +2582,13 @@ input, select, textarea {
 		list-style: disc;
 		margin: 0 0 2rem 0;
 		padding-left: 1rem;
+		list-style: none; /* Remove default list-style */
 	}
 
 		ul li {
 			padding-left: 0.5rem;
+			display: flex; /* Make image and paragraph text in a row */
+			margin-bottom: 10px; /* Add padding between images */
 		}
 
 		ul.alt {
@@ -3222,12 +3231,16 @@ input, select, textarea {
 
 		.wrapper.style2 {
 			background: #f9f9f9;
+			width: 100%; /* Ensure the inner div fills the entire width */
+			background-repeat: repeat-x;
+			bottom: -15rem; /* Moving the footer */
+			position: absolute; /* Make the footer a square */
 		}
 
 			.wrapper.style2:before, .wrapper.style2:after {
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 0,100 100,100' style='fill:%23f9f9f9%3B' /%3E%3C/svg%3E");
-				z-index: 2;
 			}
+		
 
 		@media screen and (max-width: 1680px) {
 
@@ -4715,4 +4728,5 @@ input, select, textarea {
 	.copyright {
 		color: rgba(40, 40, 40, 0.5);
 		text-align: center;
+		position: absolute;
 	}
