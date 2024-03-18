@@ -144,6 +144,21 @@ input, select, textarea {
 
 }
 
+.card-list, .card-reverse {
+	width: 100%;
+  max-height:fit-content;
+  overflow:hidden;
+  
+  display:flex;
+  flex-wrap: wrap;
+  gap:1rem;
+}
+
+/* What is unique for the reversed card - only the row direction */
+.card-reverse{
+	flex-direction: row-reverse;
+  }
+
 /* Some left and right padding inside the container */
 .container {
   padding: 0 16px;
