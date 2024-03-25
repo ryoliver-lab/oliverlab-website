@@ -34,6 +34,7 @@ body {
 	line-height: 1;
 }
 
+
 ol, ul {
 	list-style: none;
 }
@@ -145,10 +146,9 @@ input, select, textarea {
 }
 
 .card-list, .card-reverse {
-	width: 100%;
+  width: 100%;
   max-height:fit-content;
   overflow:hidden;
-  
   display:flex;
   flex-wrap: wrap;
   gap:1rem;
@@ -2599,15 +2599,31 @@ input, select, textarea {
 
 	}
 
+	#footer div header {
+		text-align: center;
+	}
+
+	#card-list div {
+		margin-bottom: 50px; /* Make distance between groups in joinus */
+		padding: 0 100px;
+	}
+
+	#card-list p {
+		padding: 0rem;
+		
+	}
+
 	ol {
 		list-style: decimal;
 		margin: 0 0 2rem 0;
 		display: flex;
 	}
 
-		ol li {
-			padding-left: 0.25rem;
-		}
+
+	ol li {
+		padding-left: 0.25rem;
+		list-style-type: decimal;
+	}
 
 	ul {
 		list-style: disc;
@@ -3031,7 +3047,8 @@ input, select, textarea {
 
 	header h2 + p {
 		font-size: 1rem; /* Changes font size of p */
-		margin-top: -2rem;
+		margin-top: 2rem;
+		padding-left: 0rem; /* remove the space on the joinus.html */
 	}
 
 	header h3 + p {
