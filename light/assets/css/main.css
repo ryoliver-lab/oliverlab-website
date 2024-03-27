@@ -34,6 +34,13 @@ body {
 	line-height: 1;
 }
 
+.inner-work {
+	padding-top: 3rem;
+}
+
+.content-index p {
+	font-size: 17pt;
+}
 
 ol, ul {
 	list-style: none;
@@ -145,6 +152,54 @@ input, select, textarea {
 
 }
 
+.the-layout {
+	display: flex;
+	max-width: 800px;
+	margin: 0 auto;
+  }
+  .the-layout * {
+	flex: 0 0 60%;
+	box-sizing: border-box;
+  }
+  .the-image {
+	background-color: transparent;
+	width: 50%; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+	margin-right: -100px; /* made description move closer */
+  }
+  .the-text {
+	padding: 0 1rem;
+	width: 80%;
+  }
+  
+  /* additionally, center it on screen when on desktop */
+  body {margin: 0;}
+  .screen-center {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
+  .screen-right {
+	min-height: 100vh;
+	display: flex;
+	align-items: right;
+	justify-content: right;
+  }
+
+  @media (max-width: 479px) {
+	.the-image > img {
+	  display: block;
+	  max-width: 100%;
+	}
+	.the-layout {
+	  flex-direction: column;
+	}
+  }
+
+  
+
 .card-list, .card-reverse {
   width: 100%;
   max-height:fit-content;
@@ -164,12 +219,38 @@ input, select, textarea {
   padding: 0 16px;
 }
 
+.container-work {
+	max-width: 100%;
+    margin: 0 auto;
+	padding: 0 0px;
+}
+
+.description {
+    flex: 0 0 auto;
+	max-width: calc(100% - 45%);
+	display: inline-block; /* Ensure description stays inline with image */
+	padding: 0rem
+}
+
+@media (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .the-image,
+    .description {
+        width: 100%;
+        margin: 0;
+    }
+}
+
 /* Clear floats */
 .container::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
+
 
 .title {
   color: grey;
@@ -271,6 +352,8 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2rem 0;
+		text-wrap: wrap;
+		
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -448,6 +531,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+		flex-direction: row;
 	}
 
 		.row > * {
@@ -2586,6 +2670,7 @@ input, select, textarea {
 
 /* List */
 
+
 	/* Edit the text location of lists */
 	li p { 
 		padding-left: 5rem; /* Make distance between text and image */
@@ -2700,7 +2785,7 @@ input, select, textarea {
 			-ms-justify-content: center;
 			justify-content: center;
 			width: 100%;
-			margin-left: 0;
+			margin-left: 1rem;
 		}
 
 			ul.actions.special li:first-child {
@@ -4179,6 +4264,22 @@ input, select, textarea {
 		min-height: 95vh;
 		position: relative;
 		width: 100%;
+	}
+
+	.banner-join {
+		background-color: #000000;
+		color: #ffffff;
+		align-items: center;
+		color: #ffffff;
+		display: flex;
+		justify-content: center;
+		min-height: 40rem;
+		min-height: 40vh;
+		width: 100%;
+	}
+
+	.banner-join h2 {
+		color: #ffffff;
 	}
 
 		#banner input, #banner select, #banner textarea {
