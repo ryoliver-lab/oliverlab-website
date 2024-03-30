@@ -42,6 +42,10 @@ body {
 	font-size: 17pt;
 }
 
+.content h2 {
+	text-align: left;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -151,6 +155,12 @@ input, select, textarea {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 }
+
+.card-work {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin-bottom: 30px;
+  
+  }
 
 .the-layout {
 	display: flex;
@@ -3038,7 +3048,7 @@ input, select, textarea {
 	}
 
 		ul.contact-icons li {
-			padding-top: 2rem;
+			padding-top: 1rem;
 		}
 
 			ul.contact-icons li .icon:before {
