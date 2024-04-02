@@ -139,7 +139,7 @@ input, select, textarea {
 	float: middle;
 	width: 50.0%;
 	margin-bottom: 16px;
-	padding: 0 16px;
+	padding: 0px 100px;
   }
 
 /* Display the columns below each other instead of side by side on small screens */
@@ -149,6 +149,14 @@ input, select, textarea {
     display: block;
   }
 }
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+	.column-large {
+	  width: 100%;
+	  display: block;
+	}
+  }
 
 /* Add some shadows to create a card effect */
 .card {
@@ -173,10 +181,19 @@ input, select, textarea {
   }
   .the-image {
 	background-color: transparent;
-	width: 50%; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-	margin-right: -100px; /* made description move closer */
+	width: 100%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+	flex-shrink: 0;
+	padding: 0px 20px; /* Adjust padding as needed */
+	z-index: 2;
   }
+
+
+  .the-image img {
+    width: 100%;
+    height: auto;
+}
+
   .the-text {
 	padding: 0 1rem;
 	width: 80%;
@@ -198,31 +215,25 @@ input, select, textarea {
 	justify-content: right;
   }
 
-  @media (max-width: 479px) {
-	.the-image > img {
-	  display: block;
-	  max-width: 100%;
-	}
-	.the-layout {
-	  flex-direction: column;
-	}
-  }
-
   
 
-.card-list, .card-reverse {
+.card-list {
   width: 100%;
   max-height:fit-content;
   overflow:hidden;
-  display:flex;
+  display:inline-block;
   flex-wrap: wrap;
-  gap:1rem;
+  gap: 1rem;
 }
 
-/* What is unique for the reversed card - only the row direction */
-.card-reverse{
-	flex-direction: row-reverse;
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+	.card-list {
+	  width: 100%;
+	  display: block;
+	}
   }
+
 
 /* Some left and right padding inside the container */
 .container {
@@ -230,27 +241,51 @@ input, select, textarea {
 }
 
 .container-work {
-	max-width: 100%;
-    margin: 0 auto;
-	padding: 0 0px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: decimal;
 }
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+	.container-work {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+  }
 
 .description {
     flex: 0 0 auto;
-	max-width: calc(100% - 45%);
-	display: inline-block; /* Ensure description stays inline with image */
-	padding: 0rem
+    max-width: 100%; /* Adjust the percentage and padding as needed */
+    display: inline-block; /* Ensure description stays inline with image */
+    padding: 0 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    vertical-align: top; /* Align with the top of the image */
 }
 
-@media (max-width: 600px) {
+
+@media screen and (max-width: 600px) {
     .content {
         flex-direction: column;
+		width: 100%;
+		display: block;
     }
 
     .the-image,
     .description {
         width: 100%;
         margin: 0;
+    }
+
+	.description {
+		width: 100%; /* Set the width of the description to 100% */
+	}
+
+	.the-image img {
+        min-width: 200px; /* Set a minimum width for the image */
+		max-width: 100%;
     }
 }
 
@@ -260,6 +295,12 @@ input, select, textarea {
   clear: both;
   display: table;
 }
+
+.container-work::after, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
 
 
 .title {
@@ -536,12 +577,17 @@ input, select, textarea {
 
 /* Row */
 
-	.row {
+	.row, .row-reverse {
 		display: flex;
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
 		flex-direction: row;
+	}
+
+	/* What is unique for the reversed card - only the row direction */
+	.row-reverse{
+		flex-direction: row-reverse;
 	}
 
 		.row > * {
@@ -554,6 +600,7 @@ input, select, textarea {
 
 		.row.aln-left {
 			justify-content: flex-start;
+			
 		}
 
 		.row.aln-center {
@@ -2699,14 +2746,14 @@ input, select, textarea {
 	}
 
 	#card-list div {
-		margin-bottom: 50px; /* Make distance between groups in joinus */
-		padding: 0 100px;
+		margin-bottom: 20px; /* Make distance between groups in joinus */
 	}
 
 	#card-list p {
 		padding: 0rem;
 		
 	}
+	
 
 	ol {
 		list-style: decimal;
