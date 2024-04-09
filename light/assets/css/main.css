@@ -319,6 +319,13 @@ input, select, textarea {
   width: 100%;
 }
 
+#button-mid .button {
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button:hover {
   background-color: #555;
 }
