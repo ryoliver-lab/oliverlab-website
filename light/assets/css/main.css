@@ -46,6 +46,11 @@ body {
 	text-align: left;
 }
 
+.content img {
+	width: 200px;
+	height: 200px;
+  }
+
 ol, ul {
 	list-style: none;
 }
@@ -132,6 +137,7 @@ input, select, textarea {
   width: 33.3%;
   margin-bottom: 16px;
   padding: 0 16px;
+  display: flex;
 }
 
 /* Two columns side by side */
@@ -155,6 +161,8 @@ input, select, textarea {
 	.column-large {
 	  width: 100%;
 	  display: block;
+	  flex-direction: column;
+	  align-items: center;
 	}
   }
 
@@ -236,12 +244,14 @@ input, select, textarea {
 	  width: 100%;
 	  display: block;
 	}
+
   }
 
 
 /* Some left and right padding inside the container */
 .container {
   padding: 0 16px;
+  height: 100%; /* Make the containers the same height */
 }
 
 .container-work {
@@ -275,6 +285,7 @@ input, select, textarea {
         flex-direction: column;
 		width: 100%;
 		display: block;
+		align-items: center;
     }
 
     .the-image,
@@ -788,6 +799,7 @@ input, select, textarea {
 		.row {
 			margin-top: 0;
 			margin-left: -2rem;
+			align-items: stretch;
 		}
 
 			.row > * {
@@ -843,6 +855,7 @@ input, select, textarea {
 				flex-wrap: wrap;
 				box-sizing: border-box;
 				align-items: stretch;
+				
 			}
 
 				.row > * {
@@ -1030,7 +1043,6 @@ input, select, textarea {
 
 				.row {
 					margin-top: 0;
-					margin-left: -2rem;
 				}
 
 					.row > * {
@@ -1332,7 +1344,7 @@ input, select, textarea {
 				display: flex;
 				flex-wrap: wrap;
 				box-sizing: border-box;
-				align-items: stretch;
+				align-items: stretch; 
 			}
 
 				.row > * {
@@ -1571,13 +1583,13 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 800px) {
 
 			.row {
 				display: flex;
 				flex-wrap: wrap;
 				box-sizing: border-box;
-				align-items: stretch;
+				align-items: stretch; 
 			}
 
 				.row > * {
@@ -3451,7 +3463,7 @@ input, select, textarea {
 				}
 
 		.wrapper.style2 { /* copywright bottom square */
-			background: #000000;
+			background: rgba(0, 0, 0, 0.5);
 			width: 100%; /* Ensure the inner div fills the entire width */
 			background-repeat: repeat-x;
 			bottom: -15rem;
@@ -3459,7 +3471,7 @@ input, select, textarea {
 		}
 
 			.wrapper.style2:before, .wrapper.style2:after { /* copywright bottom angle thing*/
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='90' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 0,100 100,100' style='fill:%23000000%3B' /%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='90' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 0,100 100,100' style='fill:rgba(0, 0, 0, 0.5)' /%3E%3C/svg%3E");
 			}
 		
 
