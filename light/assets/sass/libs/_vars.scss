@@ -15,9 +15,9 @@
 		menu:						0.5s,
 		nav:						0.5s,
 		transition:					0.2s,
-		bg-fadein:					0.001s,
-		bg-transition:				0.2s,
-		bg-slide:					0.2s, // (lower = faster, higher = slower)
+		bg-fadein:					0.1,
+		bg-transition:				1s,
+		bg-slide:					0.1s, // (lower = faster, higher = slower)
 		gallery-lightbox-fadein:	0.5s
 	);
 

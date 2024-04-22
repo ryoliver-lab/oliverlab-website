@@ -84,38 +84,13 @@
 			opacity: 0.85;
 
 			div {
-				@include vendor('transition', ('opacity #{_duration(bg-transition)} ease'));
 				background-size: cover;
 				height: 100%;
 				left: 0;
-				opacity: 0;
+				opacity: 1; /* Assuming you want the background image to be fully visible */
 				position: absolute;
 				top: 0;
-				visibility: hidden;
-				width: 150%;
-
-				&.visible {
-					@include vendor('animation', 'bg #{_duration(bg-slide)} linear infinite');
-					opacity: 1;
-					visibility: visible;
-					z-index: 1;
-
-					&.top {
-						z-index: 2;
-					}
-
-					@include breakpoint('<=large') {
-						@include vendor('animation', 'bg #{_duration(bg-slide) * 0.65} linear infinite');
-					}
-
-					@include breakpoint('<=small') {
-						@include vendor('animation', 'bg #{_duration(bg-slide) * 0.4} linear infinite');
-					}
-				}
-
-				&:only-child {
-					@include vendor('animation-direction', 'alternate !important');
-				}
+				width: 100%;
 			}
 
 			body.is-preload & {
