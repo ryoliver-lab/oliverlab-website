@@ -177,12 +177,15 @@ input, select, textarea {
 
 .card img {
 	border-radius: 50%;
+	width: 100%; /* Set percentage width */
+    height: auto; /* Maintain aspect ratio */
+	aspect-ratio: 1 / 1; /* 1:1 aspect ratio */
+	object-fit: cover;
 }
 
 .card-work {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	margin-bottom: 30px;
-	display:flex;
   
   }
 
@@ -3794,6 +3797,14 @@ input, select, textarea {
 		margin: 0 auto 3rem;
 	}
 
+	.split h1 {
+		border-bottom: 2px solid;
+		display: inline-block;
+		letter-spacing: 0.25rem;
+		margin-bottom: 2.5rem;
+		padding-bottom: 1rem;
+	}
+
 		.split h2 {
 			border-bottom: 2px solid;
 			display: inline-block;
@@ -4620,7 +4631,7 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			pointer-events: none;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/slides/slide02.jpg"); /* banner image property */
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../images/slides/slide01.jpg"); /* banner image property */
 			background-size: cover; /* Adjusted property */
 			z-index: 2;
 		}
