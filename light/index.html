@@ -10,6 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" rel="stylesheet"/>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" rel = "stylesheet"/>
 	</head>
 	<body class="is-preload">
 
@@ -58,8 +60,9 @@
 					<section id="footer" class="wrapper">
 						<div class="inner">
 								<div id = "contact-cards" class="content">
-									<header>
-										<h2>Team</h2>
+									<header">
+										<h2 class="big-header">Team</h2>
+									</header>
 						<div class="row"> <!-- Beginning of contact card -->
 
 							<!-- First Contact Card -->
@@ -72,7 +75,12 @@
         								<div class="row aln-center">
 											<ol class="contact-icons">
 												<li><a href="mailto:rutholiver@ucsb.edu" class="icon solid alt fa-envelope"></a></li>
-												<li><a href="https://scholar.google.com/citations?user=Cqv1EXkAAAAJ&hl=en&oi=ao" target = "_blank" class="icon solid alt fa-search"></a></li>
+												<li>
+													<a href="https://scholar.google.com/citations?user=Cqv1EXkAAAAJ&hl=en&oi=ao" target = "_blank">
+														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="50">
+															<image href="assets/webfonts/fa-brands-google-scholar.svg" width="100" height="100" />
+														</svg>
+													</a></li>
 											</ol>
 										</div>
         								<a href = "https://scholar.google.com/citations?user=Cqv1EXkAAAAJ&hl=en&oi=ao" target = "_blank">
@@ -85,15 +93,20 @@
 					<!-- Second Contact Card -->
 					<div class="column">
 						<div class="card">
-							<img src="images/headshot_wide.jpeg" alt="Person Two" style = "display: flex; flex-wrap: wrap;">
+							<img src="images/headshot_wide.jpeg" alt="Person Two" style="width:100%">
 							<div class="container">
 								<h2>Person2 Name</h2>
 								<p class="title">Person Two Title</p>
 								<div class="row aln-center">
 									<ol class="contact-icons">
 										<li><a href="mailto:person2@gmail.com" class="icon solid alt fa-envelope"></a></li>
-										<li><a href="https://scholar.google.com/citations?user=Cqv1EXkAAAAJ&hl=en&oi=ao" target = "_blank" class="icon solid alt fa-search"></a></li>
-									</ol>
+										<li>
+											<a href="https://scholar.google.com/citations?user=Cqv1EXkAAAAJ&hl=en&oi=ao" target = "_blank">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="50">
+													<image href="assets/webfonts/fa-brands-google-scholar.svg" width="100" height="100" />
+												</svg>
+											</a></li>									
+										</ol>
 								</div>
 								<a href = "https://scholar.google.com/citations?user=Cqv1EXkAAAAJ&hl=en&oi=ao" target = "_blank">
 									<p><button class="button">Learn More</button></p>
@@ -112,8 +125,13 @@
 								<div class="row aln-center">
 									<ol class="contact-icons">
 										<li><a href="mailto:person3@gmail.com" class="icon solid alt fa-envelope"></a></li>
-										<li><a href="https://scholar.google.com/citations?user=Cqv1EXkAAAAJ&hl=en&oi=ao" target = "_blank" class="icon solid alt fa-search"></a></li>
-									</ol>
+										<li>
+											<a href="https://scholar.google.com/citations?user=Cqv1EXkAAAAJ&hl=en&oi=ao" target = "_blank">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="50">
+													<image href="assets/webfonts/fa-brands-google-scholar.svg" width="100" height="100" />
+												</svg>
+											</a></li>									
+										</ol>
 								</div>
 								<a href = "https://scholar.google.com/citations?user=Cqv1EXkAAAAJ&hl=en&oi=ao" target = "_blank">
 									<p><button class="button">Learn More</button></p>
@@ -125,11 +143,11 @@
 		</div>
 	</div>
 	
-	<div class="inner">
+	<div class="inner" style = "padding-bottom: 4rem;">
 		<div class="inner-work">
 		<div id = "our-work" class="content">
 			<header>
-				<h2>Our Work</h2>
+				<h2 class="big-header">Our Work</h2>
 			</header>
 			 <!-- Beginning of work  -->
 			 <div class = "row" style = "padding-bottom: 4rem;">
@@ -213,10 +231,52 @@
 			</div>
 			</div>
 		</div>
+		</div>
 
 			 <!-- End of work cards -->
 		</div>
 	</div>
+	
+	<!-- Start past Work cards -->
+	<div class="inner">
+	<div class="container-scroll">
+		<h2 class="big-header">Past Work</h2>
+		<ul class="cards">
+		  <li class="card-scroll">
+			<div>
+			  <h3 class="card-title">Service 1</h3>
+			  <div class="card-content">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			  </div>
+			</div>
+			<div class="card-link-wrapper">
+			  <a href="" class="card-link">Learn More</a>
+			</div>
+		  </li>
+		  <li class="card-scroll">
+			<div>
+			  <h3 class="card-title">Service 2</h3>
+			  <div class="card-content">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab repudiandae magnam harum natus fuga et repellat in maiores.</p>
+			  </div>
+			</div>
+			<div class="card-link-wrapper">
+			  <a href="" class="card-link">Learn More</a>
+			</div>
+		  </li>
+		  <li class="card-scroll">
+			<div>
+			  <h3 class="card-title">Service 3</h3>
+			  <div class="card-content">
+				<p>Phasellus ultrices lorem vel bibendum ultricies. In hendrerit nulla a ante dapibus pulvinar eu eget quam.</p>
+			  </div>
+			</div>
+			<div class="card-link-wrapper">
+			  <a href="" class="card-link">Learn More</a>
+			</div>
+		  </li>
+		</ul>
+		</div>
 	</div>
 
 	<!-- Copyright -->
