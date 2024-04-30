@@ -192,22 +192,40 @@ input, select, textarea {
   }
 
 /*CUSTOM VARIABLES HERE*/
-.cards {
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+  }
+
+  /*this makes the cards scroll*/
+  .cards {
 	display: flex;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
+	width: 100%;
+	
   }
+  
   .card-scroll {
-	display: flex;
   	flex-direction: column;
-  	flex: 0 0 100%;
+  	flex: 1;
   	padding: 20px;
   	background: var(--white);
   	border-radius: 12px;
   	box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
   	scroll-snap-align: start;
   	transition: all 0.2s;
-	width: 50.0%;
+	width: 100%;
+  }
+
+  .card-scroll .card-title {
+	font-size: 20px;
+  }
+
+  .card-scroll .card-content {
+	margin: 20px 0;
+	max-width: 85%;
   }
 
   .card-scroll .card-link-wrapper {
@@ -515,6 +533,13 @@ input, select, textarea {
 		margin: 0 0 2rem 0;
 		text-wrap: wrap;
 		
+	}
+
+	.card-scroll p {
+		margin: 0 0 0 0;
+		text-wrap: wrap;
+		padding-left: 0rem; /* Make distance between text and image */
+		padding-top: 1rem;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
