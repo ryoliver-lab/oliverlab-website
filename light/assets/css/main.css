@@ -185,7 +185,7 @@ input, select, textarea {
 	object-position: center;
 }
 
-.card-work {
+.card-work-delete {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	margin-bottom: 30px;
   
@@ -207,25 +207,46 @@ input, select, textarea {
 	scroll-snap-type: x mandatory;
 	unicode-bidi: isolate;
   }
+  .cards-work {
+	display: flex;
+	padding: 25px 0px;
+	list-style: none;
+	unicode-bidi: isolate;
+  }
 
 
   
   .card-scroll {
-  	flex-direction: column;
-	flex-shrink: 0;
-	flex: 0 0 calc(50% - 20px); /* desired width percentage for each card */
-    margin-right: 20px; /* Adjust the margin between cards */
-    min-width: 400px; /* set minimum card width */
-  	padding: 20px;
-  	background: var(--white);
-  	border-radius: 12px;
-  	box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
-  	scroll-snap-align: start;
-  	transition: all 0.2s;
-	display: flex;
-  }
+	flex-direction: column;
+  flex-shrink: 0;
+  flex: 0 0 calc(20% - 20px); /* desired width percentage for each card */
+  margin-right: 20px; /* Adjust the margin between cards */
+  min-width: 400px; /* set minimum card width */
+	padding: 20px;
+	background: var(--white);
+	border-radius: 12px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+	scroll-snap-align: start;
+	transition: all 0.2s;
+  display: flex;
+}
 
-  .card-scroll .card-title {
+  .card-work {
+	flex-direction: column;
+  flex-shrink: 0;
+  flex: 0 0 calc(50% - 20px); /* desired width percentage for each card */
+  margin-right: 20px; /* Adjust the margin between cards */
+  min-width: 400px; /* set minimum card width */
+	padding: 20px;
+	background: var(--white);
+	border-radius: 12px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+	scroll-snap-align: start;
+	transition: all 0.2s;
+  display: flex;
+}
+
+  .card-scroll .card-title .card-work {
 	font-size: 20px;
   }
 
@@ -234,7 +255,16 @@ input, select, textarea {
 	max-width: 100%;
   }
 
+  .card-content-work .card-work {
+	margin: 20px 0;
+	max-width: 100%;
+  }
+
   .card-scroll .card-link-wrapper {
+	margin-top: auto;
+  }
+
+  .card-work .card-link-wrapper {
 	margin-top: auto;
   }
 
@@ -249,28 +279,37 @@ input, select, textarea {
   }
   
   @media (min-width: 500px) {
-	.card-scroll {
+	.card-scroll .card-work {
 	  flex-basis: calc(50% - 10px);
 	}
 	.card-scroll:not(:last-child) {
 	  margin-right: 20px;
 	}
+	.card-work:not(:last-child) {
+		margin-right: 20px;
+	  }
   }
   @media (min-width: 700px) {
-	.card-scroll {
+	.card-scroll .card-work {
 	  flex-basis: calc(calc(100% / 3) - 20px);
 	}
 	.card-scroll:not(:last-child) {
 	  margin-right: 30px;
 	}
+	.card-work:not(:last-child) {
+		margin-right: 20px;
+	  }
   }
   @media (min-width: 1100px) {
-	.card-scroll {
+	.card-scroll .card-work {
 	  flex-basis: calc(25% - 30px);
 	}
 	.card-scroll:not(:last-child) {
 	  margin-right: 40px;
 	}
+	.card-work:not(:last-child) {
+		margin-right: 40px;
+	  }
   }
 
 .the-layout {
@@ -536,6 +575,14 @@ input, select, textarea {
 		text-wrap: wrap;
 		padding-left: 0rem; /* Make distance between text and image */
 		padding-top: 1rem;
+	}
+
+	.card-work p {
+		margin: 0 20px 20px 0;
+		text-wrap: wrap;
+		padding-left: 0rem; /* Make distance between text and image */
+		padding-top: 1rem;
+		
 	}
 
 	h1, h2, h3, h4, h5, h6 {
