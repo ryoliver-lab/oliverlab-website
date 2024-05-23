@@ -143,6 +143,7 @@ input, select, textarea {
   height: auto;
 }
 
+
 #join-us .column {
 		float: middle;
 		width: 33.3%;
@@ -190,11 +191,11 @@ input, select, textarea {
 
 .card-contact {
 	flex-direction: column;
-  flex-shrink: 0;
+  flex-shrink: 10;
   flex: 0 0 calc(25% - 20px); /* desired width percentage for each card */
   margin-right: 20px; /* Adjust the margin between cards */
-  min-width: 100px; /* set minimum card width */
-	padding: 15px;
+  min-width: 225px; /* set minimum card width */
+	padding: 10px;
 	background: var(--white);
 	border-radius: 12px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
@@ -202,6 +203,29 @@ input, select, textarea {
 	transition: all 0.2s;
   display: flex;
   height: auto;
+}
+
+.card-contact h3,
+.card-contact h6,
+.card-contact ol,
+.card-contact .card-link-wrapper {
+  margin: 0px 0; /* Adjust the values as needed */
+  padding: 0;
+}
+
+.card-contact ol {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 5px 0; /* Adjust the values as needed */
+}
+
+.card-contact .contact-icons li {
+  display: inline-block;
+  margin: 0 5px; /* Adjust spacing between icons if needed */
+}
+
+.card-contact .card-link-wrapper {
+  margin: 0px 0; /* Adjust the values as needed */
 }
 
 .card img {
@@ -213,7 +237,7 @@ input, select, textarea {
 	object-position: center;
 }
 
-.card-contact img {
+.cards-work img {
 	border-radius: 50%;
 	width: 100%; /* Set percentage width */
     height: auto; /* Maintain aspect ratio */
@@ -221,6 +245,85 @@ input, select, textarea {
 	object-fit: cover;
 	object-position: center;
 }
+
+/*testing this*/
+.card-container-test {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-test {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card-test:hover {
+    transform: scale(1.05);
+}
+
+.profile-image-test {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0px;
+}
+
+.card-title {
+    margin: 0px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.title {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.contact-icons-test {
+	list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.contact-icons-test li {
+    display: inline-block;
+}
+
+.card-link-wrapper-test {
+    margin-top: 0px;
+}
+
+.card-link-test {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.card-link-test:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .card-container-test {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*testing this*/
 
 .card-work-delete {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -653,6 +756,7 @@ input, select, textarea {
 
 	h3 {
 		font-size: 1.5rem;
+		margin: 0 0 0 0;
 	}
 
 	h4 {
@@ -664,7 +768,17 @@ input, select, textarea {
 	}
 
 	h6 {
-		font-size: 0.75rem;
+		font-size: 0.65rem;
+	}
+
+	.card-link-wrapper h6 {
+		margin: 1rem 0rem 0.5rem 0rem;
+		margin-top: auto;
+	}
+
+
+	.card-link-wrapper div {
+		margin: 0rem 0 0rem 0;
 	}
 
 	@media screen and (max-width: 1280px) {
@@ -2960,6 +3074,13 @@ input, select, textarea {
 		list-style: none;
 		margin: 0 0 2rem 0;
 		padding-right: 1.25rem;
+
+	}
+
+	.card-contact div li {
+		list-style: none;
+		margin: 0rem 0rem 0rem 0;
+		padding-right: 0rem;
 
 	}
 
