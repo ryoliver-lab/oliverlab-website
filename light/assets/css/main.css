@@ -205,27 +205,18 @@ input, select, textarea {
   height: auto;
 }
 
-.card-contact h3,
-.card-contact h6,
-.card-contact ol,
-.card-contact .card-link-wrapper {
-  margin: 0px 0; /* Adjust the values as needed */
-  padding: 0;
-}
-
-.card-contact ol {
-  list-style: none; /* Remove default list styling */
-  padding: 0;
-  margin: 5px 0; /* Adjust the values as needed */
-}
-
-.card-contact .contact-icons li {
-  display: inline-block;
-  margin: 0 5px; /* Adjust spacing between icons if needed */
-}
-
-.card-contact .card-link-wrapper {
-  margin: 0px 0; /* Adjust the values as needed */
+.card-contact-test {
+    flex-direction: column;
+    flex-shrink: 0;
+    flex: 0 0 calc(25% - 20px); /* Default: 4 cards per row */
+    margin-right: 20px; /* Adjust the margin between cards */
+    min-width: 150px; /* Set minimum card width */
+    padding: 20px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    display: block;
+    box-sizing: border-box;
 }
 
 .card img {
@@ -237,14 +228,20 @@ input, select, textarea {
 	object-position: center;
 }
 
-.cards-work img {
-	border-radius: 50%;
-	width: 100%; /* Set percentage width */
-    height: auto; /* Maintain aspect ratio */
-	aspect-ratio: 1 / 1; /* 1:1 aspect ratio */
-	object-fit: cover;
-	object-position: center;
+/* Media query for screens smaller than 900px (2 cards per row) */
+@media (max-width: 1000px) {
+    .card-contact-test {
+        flex: 1 1 calc(50% - 1rem);
+    }
 }
+
+/* Media query for screens smaller than 600px (1 card per row) */
+@media (max-width: 600px) {
+    .card-contact-test {
+        flex: 1 1 100%;
+    }
+}
+
 
 /*testing this*/
 .card-container-test {
@@ -279,14 +276,20 @@ input, select, textarea {
 
 .card-title {
     margin: 0px 0;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
+}
+
+.card-subtitle {
+    margin: 5px 0;
+    font-size: 0.8em;
+    color: #808080;
 }
 
 .title {
     margin: 10px 0;
     font-size: 1.2em;
-    color: #555;
+    color: #444;
 }
 
 .contact-icons-test {
@@ -298,13 +301,6 @@ input, select, textarea {
     margin: 10px 0;
 }
 
-.contact-icons-test li {
-    display: inline-block;
-}
-
-.card-link-wrapper-test {
-    margin-top: 0px;
-}
 
 .card-link-test {
     color: black;
@@ -313,7 +309,7 @@ input, select, textarea {
     text-decoration: none;
 }
 
-.card-link-test:hover {
+.card-link:hover {
     text-decoration: underline;
 }
 
@@ -354,6 +350,23 @@ input, select, textarea {
 	unicode-bidi: isolate;
   }
 
+  .cards-contact {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+  .card-contact-test img {
+	border-radius: 50%;
+	width: 100%; /* Set percentage width */
+    height: auto; /* Maintain aspect ratio */
+	aspect-ratio: 1 / 1; /* 1:1 aspect ratio */
+	object-fit: cover;
+	object-position: center;
+  }
+
 
   
   .card-scroll {
@@ -371,6 +384,7 @@ input, select, textarea {
 	transition: all 0.2s;
   display: flex;
 }
+
 
   .card-work {
 	flex-direction: column;
@@ -406,6 +420,10 @@ input, select, textarea {
   }
 
   .card-work .card-link-wrapper {
+	margin-top: auto;
+  }
+
+  .card-contact-test .card-link-wrapper {
 	margin-top: auto;
   }
 
