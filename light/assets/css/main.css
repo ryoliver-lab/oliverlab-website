@@ -428,6 +428,7 @@ input, select, textarea {
   }
 
   .card-scroll .card-link {
+	font: inherit;
 	display: flex;
 	text-decoration: none;
 	color: white;
