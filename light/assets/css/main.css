@@ -201,9 +201,11 @@ input, select, textarea {
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
 	scroll-snap-align: start;
 	transition: all 0.2s;
-  display: flex;
   height: auto;
+  display: flex;
+	grid-template-columns: repeat(4, 1fr);
 }
+
 
 .card-contact-test {
     flex-direction: column;
@@ -219,6 +221,10 @@ input, select, textarea {
     box-sizing: border-box;
 }
 
+.card-contact-test ol {
+	justify-content: center;
+}
+
 .card img {
 	border-radius: 50%;
 	width: 100%; /* Set percentage width */
@@ -230,16 +236,18 @@ input, select, textarea {
 
 /* Media query for screens smaller than 900px (2 cards per row) */
 @media (max-width: 1000px) {
-    .card-contact-test {
-        flex: 1 1 calc(50% - 1rem);
-    }
+
+	.card-contact-test ol {
+		justify-content: left;
+	}
 }
 
 /* Media query for screens smaller than 600px (1 card per row) */
-@media (max-width: 600px) {
-    .card-contact-test {
-        flex: 1 1 100%;
-    }
+@media (max-width: 550px) {
+
+	.card-contact-test ol {
+		justify-content: left;
+	}
 }
 
 
@@ -344,18 +352,36 @@ input, select, textarea {
 	unicode-bidi: isolate;
   }
   .cards-work {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	padding: 25px 0px;
 	list-style: none;
 	unicode-bidi: isolate;
   }
 
   .cards-contact {
-    display: flex;
+    display: grid;
+	grid-template-columns: repeat(4, 1fr);
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .cards-contact {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+	.cards-work {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 550px) {
+    .cards-contact {
+        grid-template-columns: 1fr;
+    }
 }
 
   .card-contact-test img {
@@ -399,6 +425,7 @@ input, select, textarea {
 	scroll-snap-align: start;
 	transition: all 0.2s;
   display: flex;
+  flex-wrap: wrap;
 }
 
   .card-scroll .card-title .card-work {
