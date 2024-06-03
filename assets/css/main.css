@@ -740,6 +740,8 @@ input, select, textarea {
 		text-decoration: underline;
 	}
 
+
+
 		a:hover {
 			text-decoration: none;
 		}
@@ -3840,6 +3842,10 @@ input, select, textarea {
 			position: absolute; /* Make the footer a square */
 		}
 
+		.wrapper.style2 a {
+			text-decoration: none;
+		}
+
 			.wrapper.style2:before, .wrapper.style2:after { /* copywright bottom angle thing*/
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='90' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 0,100 100,100' style='fill:rgba(3, 33, 8, 1)' /%3E%3C/svg%3E");
 			}
@@ -5351,10 +5357,25 @@ input, select, textarea {
 
 		}
 
+
 /* Footer */
+
+.normal-link {
+	color: inherit;
+	text-decoration: underline;
+}
+
 
 	.copyright {
 		color: rgba(255, 255, 255, 0.5);
 		text-align: center;
 		position: absolute;
+	}
+
+	.copyright p{
+		color: rgba(255, 255, 255, 0.5);
+		text-align: left;
+		position: absolute;
+		padding-left: 1rem;
+		bottom: 0;
 	}
