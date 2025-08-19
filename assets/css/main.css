@@ -4679,8 +4679,10 @@ input, select, textarea {
 				}
 
 					#menu .links li a:hover {
-						background-color: #ffffff;
-						color: #000000;
+						text-decoration: underline;
+						text-underline-offset: 0.75rem;
+						text-decoration-thickness: 0.1rem;
+						color: #ffffff;
 					}
 
 		@media screen and (max-width: 736px) {
