@@ -1,2 +1,2 @@
-# Oliver Lab Website
+# Oliver Lab
 Understanding our planet's biodiversity has never been more urgent. Technological advances are creating exciting opportunities to study wildlife at unprecedented scales, but we’re just now unlocking the insights that this tidal wave of data holds. Our group works to create new perspectives on how humans and wildlife can coexist in an era of rapid change.
